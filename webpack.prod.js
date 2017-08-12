@@ -8,7 +8,7 @@ const PurifyCSSPlugin = require('purifycss-webpack');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: './src/app/client/index.js',
     bootstrap: bootstrapEntryPoints.prod,
   },
   output: {

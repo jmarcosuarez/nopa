@@ -2,9 +2,15 @@
 Minimal react boilerplate - babel/webpack2
 ## Installation
 TODO: Describe the installation process
-## Usage - Development environment
+## Usage
 
-Execute `npm start` to run the development server on **[http://localhost:8080](http://localhost:8080)
+Execute `npm install` to install dependencies
+
+Then
+
+Execute `npm run dev` to run the development server on **http://localhost:8080
+or
+Execute `npm run prod` to run the production server. To test it works see on **http://localhost:4000
 
 ## Contributing
 1. Fork it!

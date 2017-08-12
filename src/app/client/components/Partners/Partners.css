@@ -1,0 +1,37 @@
+.partners {
+  background-color: #2ABBF0;
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    flex: auto;
+    width: 10%;
+    
+    min-width: 100px;
+    max-width: 200px;
+    &:last-of-type {
+      width: 90%;
+      max-width: 500px;
+    }
+   
+    span {
+      color: white;
+      font-weight: 900;
+    }
+
+    > div {
+      flex: 1 0 70px;
+      margin: 20px;
+      img {
+        height: 24px;
+      }
+    }
+  }
+}

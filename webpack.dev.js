@@ -7,7 +7,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './src/index.js',
+    './src/app/client/index.js',
     bootstrapEntryPoints.dev,
   ],
   module: {
@@ -72,7 +72,7 @@ module.exports = {
       },
       hash: true,
       filename: 'index.html', // Name of file created
-      template: './src/index.ejs',  // Load custom template
+      template: './src/app/client/index.ejs',  // Load custom template
     }),
     new webpack.HotModuleReplacementPlugin(), // Enable HMR
     new webpack.NamedModulesPlugin(),
