@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, { PropTypes } from 'react';
 
 class App extends React.Component {
@@ -11,7 +12,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 App.contextTypes = {

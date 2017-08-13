@@ -41,7 +41,7 @@ const LoginForm = props => (
 LoginForm.propTypes = {
   handleSubmit: React.PropTypes.func.isRequired,
   handleChange: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.object,
+  errors: React.PropTypes.element.isRequired,
 
 };
 

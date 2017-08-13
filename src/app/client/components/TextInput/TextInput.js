@@ -22,9 +22,14 @@ const TextInput = props => (
 TextInput.propTypes = {
   name: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
+  type: React.PropTypes.string.isRequired,
   handleChange: React.PropTypes.func.isRequired,
-  password: React.PropTypes.bool,
   errors: React.PropTypes.string,
 };
+
+TextInput.defaultProps = {
+  errors: "",
+};
+
 
 export default TextInput;

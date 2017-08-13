@@ -39,7 +39,7 @@ class ErrorPage extends React.Component {
 }
 
 ErrorPage.propTypes = {
-  route: React.PropTypes.object.isRequired,
+  route: React.PropTypes.element.isRequired,
 };
 
 export default ErrorPage;

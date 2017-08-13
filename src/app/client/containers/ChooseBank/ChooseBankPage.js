@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import React from 'react';
 import { Layout, Button } from '../../components';
 import * as Paths from '../../constants/paths';
@@ -28,16 +29,16 @@ const bankList = [{
 },
 ];
 
-const ChooseBankPage = props => (
+const ChooseBankPage = () => (
   <Layout title="Choose your bank!">
     <div className="main-content">
       <h1>Which bank does this account belong to?</h1>
-      <p>Track all of your payments by connecting as many bank accounts as you'd like to your Nopa<br />
+      <p>Track all of your payments by connecting as many bank accounts as you&#39;d like to your Nopa<br />
           account and get updates on your balance instantly.</p>
 
       <div className="bank-list">
         {
-              bankList.map((bank, index) => <div key={index}><img alt={bank.name} src={bank.logo} /></div>)
+              bankList.map(bank => <div><img alt={bank.name} src={bank.logo} /></div>)
             }
       </div>
 

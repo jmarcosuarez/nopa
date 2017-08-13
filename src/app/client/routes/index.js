@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 import App from '../containers/App';
 import { HomePage, ChooseBankPage, LoginPage, StatementPage, ErrorPage } from '../containers';
 
-export default function Routes(store) {
+export default function Routes() {
   return (
     <Route path="/" component={App} >
       <IndexRoute component={HomePage} />

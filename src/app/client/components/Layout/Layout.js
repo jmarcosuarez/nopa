@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { PropTypes, Component } from 'react';
 import { Header, Footer, Partners } from '../';
 

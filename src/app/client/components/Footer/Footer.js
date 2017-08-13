@@ -6,7 +6,7 @@ const Footer = props => (
       <p>
           &copy; Nopa Limited 2017 All rights reserved.
           &lsquo;Nopa&rsquo; and the Nopa logo are trade marks of Nopa Limited.
-          Nopa is a member of CIFAS - the UK's leading anti-fraud association,
+          Nopa is a member of CIFAS - the UK&#39;s leading anti-fraud association,
           and we are registered with the Office of the Information Commissioner
           (No. Z879078).
         </p>
