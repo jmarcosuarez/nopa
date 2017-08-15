@@ -8,7 +8,8 @@ import configureStore from './redux/stores/configureStore';
 import DevTools from './DevTools';
 import routes from './routes/index';
 
-import '../static/stylesheets/main.css';
+// import '../static/stylesheets/main.css';
+import styles from '../static/stylesheets/main.css';
 
 const store = configureStore();
 

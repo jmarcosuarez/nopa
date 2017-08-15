@@ -2,6 +2,7 @@
 import React from 'react';
 import { Layout, Button } from '../../components';
 import * as Paths from '../../constants/paths';
+import styles from './ChooseBank.css';
 
 const bankList = [{
   name: 'Barclays',
@@ -31,14 +32,14 @@ const bankList = [{
 
 const ChooseBankPage = () => (
   <Layout title="Choose your bank!">
-    <div className="main-content">
+    <div className={styles.main}>
       <h1>Which bank does this account belong to?</h1>
       <p>Track all of your payments by connecting as many bank accounts as you&#39;d like to your Nopa<br />
           account and get updates on your balance instantly.</p>
 
-      <div className="bank-list">
+      <div className={styles.bankList}>
         {
-              bankList.map(bank => <div><img alt={bank.name} src={bank.logo} /></div>)
+              bankList.map(bank => <div key={bank.name}><img alt={bank.name} src={bank.logo} /></div>)
             }
       </div>
 

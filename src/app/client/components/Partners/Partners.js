@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Partners.css';
 
 const partners = [{
   name: 'Airbnb',
@@ -23,7 +24,7 @@ const partnerLogos = partners.map(partner =>
 );
 
 const Partners = props => (
-  <section className="partners">
+  <section className={styles.partners}>
     <div>
       <span>Our partners:</span>
     </div>

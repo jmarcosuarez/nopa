@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './Footer.css';
 
 const Footer = props => (
-  <footer className="footer">
+  <footer className={styles.footer}>
     <div>
       <p>
           &copy; Nopa Limited 2017 All rights reserved.

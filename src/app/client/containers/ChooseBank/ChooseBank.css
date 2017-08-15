@@ -1,4 +1,6 @@
-.bank-list {
+@import "../../../static/stylesheets/containers/layout.css";
+
+.bankList {
 
   display: flex;
   margin: 0 auto;
@@ -7,7 +9,7 @@
   width: 400px;
   justify-content: center;
 
-  > div {
+  & > div {
     background-color: white;
     padding: 10px;
     width: 159px;
@@ -17,7 +19,7 @@
     margin: 5px;
     display: flex;
 
-    > img {
+    & > img {
       filter: grayscale(100%);
       &.selected {
         filter: grayscale(0%);

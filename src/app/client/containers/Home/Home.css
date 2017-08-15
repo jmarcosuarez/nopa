@@ -1,4 +1,6 @@
-.layout .logo {
+@import "../../../static/stylesheets/containers/layout.css";
+
+.logo {
   text-align: center;
   margin-bottom: 20px;
 }

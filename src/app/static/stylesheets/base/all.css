@@ -1,4 +1,6 @@
-$spacer: 1rem;
+:root {
+  --spacer: 1rem;
+}
 
 html {
 }
@@ -19,7 +21,7 @@ h2 {
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 2.14rem;
-  margin: 0 0 $spacer 0;
+  margin: 0 0 var(--spacer) 0;
 
 }
 p {
@@ -27,6 +29,6 @@ p {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.42rem;
-  margin: 0 0 $spacer 0;
+  margin: 0 0 var(--spacer) 0;
 
 }

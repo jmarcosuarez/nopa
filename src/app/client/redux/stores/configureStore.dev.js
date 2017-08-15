@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers';
-import DevTools from '../../DevTools';
+// import DevTools from '../../DevTools';
 
 const router = routerMiddleware(browserHistory);
 // const createStoreWithMiddleware = applyMiddleware(thunk, router)(createStore);
@@ -14,7 +14,7 @@ const enhancer = compose(
   // Middleware you want to use in development:
   applyMiddleware(thunk, router),
   // Required! Enable Redux DevTools with the monitors you chose
-  DevTools.instrument(),
+  // DevTools.instrument(),
 );
 
 export default function configureStore(initialState) {

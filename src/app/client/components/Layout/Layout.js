@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import React, { PropTypes, Component } from 'react';
 import { Header, Footer, Partners } from '../';
+import styles from './Layout.css';
 
 class Layout extends Component {
 
@@ -12,7 +13,7 @@ class Layout extends Component {
     return (
       <section>
         <Header />
-        <div className="layout">
+        <div className={styles.layout}>
           {this.props.children}
         </div>
         <Partners />

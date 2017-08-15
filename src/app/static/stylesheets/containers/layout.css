@@ -1,46 +1,46 @@
-@import "../../../client/components/Layout/Layout";
-
-.main-content {
+.main {
   padding: 40px;
   text-align: center;
 
-  h1 {
+  & h1 {
     color: white;
   }
 
-  p {
+  & p {
     color: #D9D9D9;
     font-size: 14px;
   }
 
-  .button {
-    margin: 0 auto;
+  & .button {
+    display: flex;
+    justify-content: center;
+    
   }
 }
 
-.secondary-content {
+.secondary {
   padding: 40px;
   background-color: white;
 
-  > div {
+  & > div {
     display: flex;
     max-width: 600px;
     margin: 0 auto;
 
-    > div:nth-child(2) {
-      .shapes {
+    & > div:nth-child(2) {
+      & .shapes {
         width: 300px;
       }
     }
 
-    > div:nth-child(1) {
+    & > div:nth-child(1) {
       padding: 10px;
-      h1 {
+      & h1 {
         color: #304FFE;
         text-align: left;
       }
 
-      p {
+      & p {
         color: dimgray;
         text-align: left;
         font-size: 14px;
@@ -48,5 +48,3 @@
     }
   }
 }
-
-
