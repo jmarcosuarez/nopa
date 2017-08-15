@@ -1,11 +1,12 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
-  .logo {
+  margin: 0;
+  padding: 10px;
+  & .logo {
 
   }
-  .signin {
+  & .signin {
 
   }
 }
