@@ -12,6 +12,10 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmarcosuarez/nopa.git"
+  },
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
@@ -76,6 +80,7 @@
     "react-router-redux": "^4.0.8",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "spected": "^0.5.0"
   }
 }

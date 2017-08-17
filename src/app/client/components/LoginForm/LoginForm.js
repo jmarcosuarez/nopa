@@ -2,33 +2,33 @@ import React from 'react';
 import enhancedForm from './enhancedForm';
 import { TextInput } from '../';
 
-const LoginForm = ({ form, handleChange, handleSubmit, errors = {} }) => (
+const LoginForm = ({ state, handleChange, handleSubmit, errors = {} }) => (
   <form onSubmit={handleSubmit}>
     <TextInput
       name="surname"
       label="Surname"
-      value={form.surname}
+      value={state.surname}
       handleChange={handleChange}
       errors={errors.surname}
     />
     <TextInput
       name="sortCode"
       label="Sort code"
-      value={form.sort}
+      value={state.sortCode}
       handleChange={handleChange}
       errors={errors.sortCode}
     />
     <TextInput
       name="accountNumber"
       label="Account number"
-      value={form.name}
+      value={state.accountNumber}
       handleChange={handleChange}
       errors={errors.accountNumber}
     />
     <TextInput
       name="passCode"
       label="PassCode"
-      value={form.passCode}
+      value={state.passCode}
       handleChange={handleChange}
       errors={errors.passCode}
       password
@@ -36,7 +36,7 @@ const LoginForm = ({ form, handleChange, handleSubmit, errors = {} }) => (
     <TextInput
       name="memorableWord"
       label="Memorable word"
-      value={form.memorableWord}
+      value={state.memorableWord}
       handleChange={handleChange}
       errors={errors.memorableWord}
     />
@@ -45,7 +45,7 @@ const LoginForm = ({ form, handleChange, handleSubmit, errors = {} }) => (
   );
 
 LoginForm.propTypes = {
-  form: React.PropTypes.object.isRequired,
+  state: React.PropTypes.object.isRequired,
   handleSubmit: React.PropTypes.func.isRequired,
   handleChange: React.PropTypes.func.isRequired,
   errors: React.PropTypes.element.isRequired,

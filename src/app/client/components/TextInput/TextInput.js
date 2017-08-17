@@ -12,6 +12,7 @@ const TextInput = props => (
       name={props.name}
       type={props.type}
       placeholder={props.label}
+      value={props.value}
       onChange={props.handleChange}
       data-error={props.errors}
     />
@@ -23,6 +24,7 @@ TextInput.propTypes = {
   name: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   type: React.PropTypes.string.isRequired,
+  value: React.PropTypes.string.isRequired,
   handleChange: React.PropTypes.func.isRequired,
   errors: React.PropTypes.string,
 };
