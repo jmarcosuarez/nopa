@@ -1,12 +1,20 @@
 /* eslint-disable react/prefer-stateless-function */
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../redux/actions';
 import styles from '../components/Layout/Layout.css';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className={styles.container}>
-        {this.props.children}
+        {
+          React.Children.map(this.props.children, child => React.cloneElement(
+              child,
+              { ...this.props },
+            ))
+        }
       </div>
     );
   }
@@ -20,4 +28,20 @@ App.contextTypes = {
   router: React.PropTypes.object,
 };
 
-export default App;
+function mapStateToProps(state) {
+  const { loggedIn } = state.user;
+  const { choosenBank } = state.bank;
+  return {
+    loggedIn,
+    choosenBank,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onSetLoggedInStatus: bindActionCreators(actions.setLoggedInStatus, dispatch),
+    onGetStatedButtonClick: bindActionCreators(actions.getStartedButtonClick, dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

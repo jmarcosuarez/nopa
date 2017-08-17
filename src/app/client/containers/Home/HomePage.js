@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { Layout, Button } from '../../components';
 import * as Paths from '../../constants/paths';
 import styles from './Home.css';
 
-const HomePage = () => (
+const HomePage = props =>
   <Layout title="Welcome to Nopa!">
     <div className={styles.main}>
       <div className={styles.logo}>
@@ -18,7 +18,7 @@ const HomePage = () => (
            you&#39;d like to your Nopa account and get updates on your balance instantly.</p>
            
       <div className={styles.button}>
-        <Button to={Paths.CHOOSE_BANK}>Get started</Button>
+        <Button to={Paths.CHOOSE_BANK} onClick={props.onGetStatedButtonClick}>Get started</Button>
       </div>
     </div>
 
@@ -39,7 +39,14 @@ const HomePage = () => (
       </div>
     </div>
 
-  </Layout>
-  );
+  </Layout>;
 
 export default HomePage;
+
+HomePage.propTypes = {
+  onGetStatedButtonClick: PropTypes.func,
+};
+
+HomePage.defaultProps = {
+  onGetStatedButtonClick: () => {},
+};
