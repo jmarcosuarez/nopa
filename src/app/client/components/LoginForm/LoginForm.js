@@ -1,5 +1,4 @@
 import React from 'react';
-import enhancedForm from './enhancedForm';
 import { TextInput } from '../';
 
 const LoginForm = ({ state, handleChange, handleSubmit, errors = {} }) => (
@@ -52,4 +51,4 @@ LoginForm.propTypes = {
 
 };
 
-export default enhancedForm(LoginForm);
+export default LoginForm;

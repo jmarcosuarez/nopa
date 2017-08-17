@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layout, LoginForm } from '../../components';
+import { Layout } from '../../components';
+import EnhancedForm from './Revalidation';
 import styles from './Login.css';
 
 const LoginPage = props => (
@@ -16,8 +17,21 @@ const LoginPage = props => (
         handleSubmit={() => {}}
         errors={{}}
       />
-    */}
+
       <LoginForm initialState={props.initialState} />
+
+    */}
+      
+      <EnhancedForm
+        values={{
+          surname: '', 
+          sortCode: '',
+          accountNumber: '',
+          passCode: '',
+          memorableWord: '',
+        }}
+      /> 
+    
     </div>
   </Layout>
   );
