@@ -1,4 +1,9 @@
 import React from 'react';
+import { compose, head } from 'ramda';
+import { isValid } from '../../containers/Login/Revalidation';
+
+const createErrorMessage = 
+  errorMsgs => isValid(errorMsgs) ? null : <div className="error">{head(errorMsgs)}</div>;
 
 const TextInput = props => (
   <div className="form-input">
@@ -8,15 +13,12 @@ const TextInput = props => (
       {props.label}
     </label>
     <input
-      id={props.name}
       name={props.name}
-      type={props.type}
-      placeholder={props.label}
+      type="text"
       value={props.value}
       onChange={props.handleChange}
-      data-error={props.errors}
     />
-    <div className="errors">{props.errors}</div>
+    <div className="errors">{ createErrorMessage(props.errors) }</div>
   </div>
   );
 
@@ -26,11 +28,11 @@ TextInput.propTypes = {
   type: React.PropTypes.string.isRequired,
   value: React.PropTypes.string.isRequired,
   handleChange: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.string,
+  errors: React.PropTypes.array,
 };
 
 TextInput.defaultProps = {
-  errors: "",
+  errors: [],
 };
 
 

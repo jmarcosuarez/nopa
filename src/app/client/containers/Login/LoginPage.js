@@ -1,39 +1,72 @@
 import React from 'react';
-import { Layout } from '../../components';
-import EnhancedForm from './Revalidation';
+import { compose, curry, pick, prop } from 'ramda';
+import { validate } from 'spected';
+import { Layout, LoginForm } from '../../components';
+import revalidation from './Revalidation';
 import styles from './Login.css';
 
-const LoginPage = props => (
-  <Layout>
-    <div className={styles.main}>
-      <h1>Which bank does this account belong to?</h1>
-      <p>Track all of your payments by connecting as many bank accounts as you&#39;d<br />
-          like to your Nopa account and get updates on your balance instantly. Plus it&#39;s free.</p>
+const isNotEmpty = a => a.trim().length > 0;
+const hasCapitalLetter = a => /[A-Z]/.test(a);
+const isGreaterThan = curry((len, a) => (a > len));
+const isLengthGreaterThan = len => compose(isGreaterThan(len), prop('length'));
 
-      {/*
-        <LoginForm
-        form
-        handleChange={() => {}}
-        handleSubmit={() => {}}
-        errors={{}}
-      />
+const basicValidationRules = {
+  surname: [
+    [isNotEmpty, 'Name should not be empty.'],
+  ],
+  memorableWord: [
+    [isLengthGreaterThan(7), 'Minimum Random length of 8 is required.'],
+    [hasCapitalLetter, 'Random should contain at least one uppercase letter.'],
+  ],
+};
 
-      <LoginForm initialState={props.initialState} />
+const validateFn = validate(() => [], a => a);
+const SimpleForm = revalidation(
+  {
+    validate: {
+      all: data => 
+        validateFn(basicValidationRules, data),
+      input: (name, value) => 
+        validateFn(pick([name], basicValidationRules), { [name]: value }),
+    },
+  },
+)(LoginForm);
 
-    */}
-      
-      <EnhancedForm
-        values={{
-          surname: '', 
-          sortCode: '',
-          accountNumber: '',
-          passCode: '',
-          memorableWord: '',
-        }}
-      /> 
-    
-    </div>
-  </Layout>
-  );
-
-export default LoginPage;
+export default class LoginPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      form: {
+        surname: 'Hola', 
+        sortCode: '',
+        accountNumber: '',
+        passCode: '',
+        memorableWord: '',
+      } };
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+  onSubmit(values) {
+    console.log('Result: ', values);
+  }
+  render() {
+    return (
+      <Layout>
+        <div className={styles.main}>
+          <h1>Which bank does this account belong to?</h1>
+          <p>Track all of your payments by connecting as many bank accounts as you&#39;d<br />
+              like to your Nopa account and get updates on your balance instantly. Plus it&#39;s free.</p>   
+          <SimpleForm
+            values={{
+              surname: '', 
+              sortCode: '',
+              accountNumber: '',
+              passCode: '',
+              memorableWord: '',
+            }}
+            submitCb={this.onSubmit}
+          /> 
+        </div>
+      </Layout>
+    );
+  }
+}
