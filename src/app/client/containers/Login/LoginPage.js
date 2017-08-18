@@ -37,7 +37,7 @@ export default class LoginPage extends React.Component {
     super(props);
     this.state = {
       form: {
-        surname: 'Hola', 
+        surname: '', 
         sortCode: '',
         accountNumber: '',
         passCode: '',

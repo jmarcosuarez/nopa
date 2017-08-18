@@ -1,3 +1,4 @@
+/* eslint-disable no-confusing-arrow */
 import React from 'react';
 import { compose, head } from 'ramda';
 import { isValid } from '../../containers/Login/Revalidation';
