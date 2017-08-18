@@ -2,33 +2,30 @@
 import React from 'react';
 import { compose, head } from 'ramda';
 import { isValid } from '../../containers/Login/Revalidation';
+import styles from './TextInput.css';
 
 const createErrorMessage = 
-  errorMsgs => isValid(errorMsgs) ? null : <div className="error">{head(errorMsgs)}</div>;
+  errorMsgs => isValid(errorMsgs) ? null : <div className={styles.error}>{head(errorMsgs)}</div>;
 
 const TextInput = props => (
-  <div className="form-input">
-    <label
-      htmlFor={props.name}
-    >
-      {props.label}
-    </label>
+  <div className={styles.formInput}>
+    <label htmlFor={props.name}>{props.name}</label>
     <input
+      id={props.name}
       name={props.name}
       type="text"
-      value={props.value}
-      onChange={props.handleChange}
+      className={isValid(props.errors) ? '' : 'error'}
+      value={props.form}
+      onChange={props.onChange}
     />
-    <div className="errors">{ createErrorMessage(props.errors) }</div>
+    <div className={styles.errorPlaceholder}>{ createErrorMessage(props.errors) }</div>
   </div>
   );
 
 TextInput.propTypes = {
   name: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  type: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired,
-  handleChange: React.PropTypes.func.isRequired,
+  form: React.PropTypes.object.isRequired,
+  onChange: React.PropTypes.func.isRequired,
   errors: React.PropTypes.array,
 };
 

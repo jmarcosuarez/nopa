@@ -1,11 +1,6 @@
-/* eslint-disable no-confusing-arrow */
 import React from 'react';
-import { compose, head } from 'ramda';
 import { TextInput } from '../';
 import { isValid } from '../../containers/Login/Revalidation';
-
-const createErrorMessage = 
-  errorMsgs => isValid(errorMsgs) ? null : <div className="error">{head(errorMsgs)}</div>;
 
 const LoginForm = ({
   form,
@@ -19,29 +14,46 @@ const LoginForm = ({
 }) =>
   (
     <div className="form">
-      <div className="formGroup">
-        <label>Name</label>
-        <input
+      <TextInput 
         name="surname"
         type="text"
         className={isValid(errors.surname) ? '' : 'error'}
         value={form.surname}
-        onChange={updateAndValidate}
+        onChange={onChange}
+        errors={errors.surname}
       />
-        <div className="errorPlaceholder">{ createErrorMessage(errors.surname) }</div>
-      </div>
-      <div className="formGroup">
-        <label>Random</label>
-        <input
+      <TextInput 
+        name="sortCode"
+        type="text"
+        className={isValid(errors.sortCode) ? '' : 'error'}
+        value={form.sortCode}
+        onChange={onChange}
+        errors={errors.sortCode}
+      />
+      <TextInput 
+        name="accountNumber"
+        type="text"
+        className={isValid(errors.accountNumber) ? '' : 'error'}
+        value={form.accountNumber}
+        onChange={onChange}
+        errors={errors.accountNumber}
+      />
+      <TextInput 
+        name="passCode"
+        type="text"
+        className={isValid(errors.passCode) ? '' : 'error'}
+        value={form.passCode}
+        onChange={onChange}
+        errors={errors.passCode}
+      />
+      <TextInput 
         name="memorableWord"
         type="text"
         className={isValid(errors.memorableWord) ? '' : 'error'}
-        onBlur={validate}
         value={form.memorableWord}
         onChange={onChange}
+        errors={errors.memorableWord}
       />
-        <div className="errorPlaceholder">{ createErrorMessage(errors.memorableWord) }</div>
-      </div>
       <button onClick={() => onSubmit(submitCb)}>Submit
     </button>
     </div>

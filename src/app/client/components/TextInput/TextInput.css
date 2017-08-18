@@ -1,5 +1,8 @@
-.errors {
+.errorPlaceholder {
 
+}
+.error {
+  background: red;
 }
 
 .formInput {
