@@ -55,7 +55,7 @@ const LoginForm = ({
         onChange={updateAndValidate}
         errors={errors.memorableWord}
       />
-      <button onClick={() => onSubmit(submitCb)}>Submit
+      <button className={styles.btn} onClick={() => onSubmit(submitCb)}>Submit
     </button>
     </div>
   );

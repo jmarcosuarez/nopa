@@ -9,7 +9,7 @@ const createErrorMessage =
 
 const TextInput = props => (
   <div className={styles.formInput}>
-    <label htmlFor={props.name}>{props.name}</label>
+    <label className="text-left" htmlFor={props.name}>{props.name}</label>
     <input
       id={props.name}
       name={props.name}

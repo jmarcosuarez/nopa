@@ -1,17 +1,47 @@
+@import "../../../static/stylesheets/abstracts/all.css";
+
+
 .formInput {
-  margin: 20px;
-
-  label {
-    display: none;
+  padding: 0;
+  border: 0;
+  text-align: left;
+  & + & {
+    margin-top: 1rem;
   }
 
-  input {
-    padding: 10px;
-    min-width: 300px;
-    border: 0;
-    border-radius:1px;
-    border-bottom: 3px solid lightgray;
+  & label {
+   display: inline-block;
+   margin-top: 2rem;
+   font-size: 1.2rem;
+   font-weight: lighter;
+   text-transform: uppercase;
+   touch-action: manipulation;
   }
+
+  & input {
+   display: block;
+   padding: .5rem .75rem;
+   width: 100%;
+   font-size: 2rem;
+   line-height: 2rem;
+   color: #55595c;
+   background-color: transparent;
+   background-image: none;
+   background-clip: padding-box;
+   border-top: 0;
+   border-right: 0;
+   border-bottom: 1px solid rgba(0,0,0,.07);
+   border-left: 0;
+   border-radius: 0.1rem;
+   /*@include transition;*/
+   
+   &:focus {
+    outline: 0;
+    box-shadow: none;
+    border-bottom-color: var(--color-darkblue);
+   }
+  }
+
 }
 
 .errorPlaceholder {
