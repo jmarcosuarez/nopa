@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextInput } from '../';
 import { isValid } from '../../containers/Login/Revalidation';
+import styles from './LoginForm.css';
 
 const LoginForm = ({
   form,
@@ -13,13 +14,13 @@ const LoginForm = ({
   submitCb,
 }) =>
   (
-    <div className="form">
+    <div className={styles.form}>
       <TextInput 
         name="surname"
         type="text"
         className={isValid(errors.surname) ? '' : 'error'}
         value={form.surname}
-        onChange={onChange}
+        onChange={updateAndValidate}
         errors={errors.surname}
       />
       <TextInput 
@@ -51,27 +52,28 @@ const LoginForm = ({
         type="text"
         className={isValid(errors.memorableWord) ? '' : 'error'}
         value={form.memorableWord}
-        onChange={onChange}
+        onChange={updateAndValidate}
         errors={errors.memorableWord}
       />
-      <button onClick={() => onSubmit(submitCb)}>Submit
+      <button className={styles.btn} onClick={() => onSubmit(submitCb)}>Submit
     </button>
     </div>
   );
 
 LoginForm.propTypes = {
-  form: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.string.isRequired,
-  updateAndValidate: React.PropTypes.string.isRequired,
+  form: React.PropTypes.object.isRequired,
+  onChange: React.PropTypes.func.isRequired,
+  updateAndValidate: React.PropTypes.func.isRequired,
   validate: React.PropTypes.func.isRequired,
-  valid: React.PropTypes.func.isRequired,
+  valid: React.PropTypes.func,
   onSubmit: React.PropTypes.func.isRequired,
   submitCb: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.array,
+  errors: React.PropTypes.object,
 };
 
 LoginForm.defaultProps = {
-  errors: [],
+  errors: {},
+  valid: () => {},
 };
 
 export default LoginForm;

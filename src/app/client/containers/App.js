@@ -28,6 +28,9 @@ App.contextTypes = {
   router: React.PropTypes.object,
 };
 
+App.defaultProps = {
+};
+
 function mapStateToProps(state) {
   const { loggedIn } = state.user;
   const { choosenBank } = state.bank;
@@ -39,8 +42,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onSetLoggedInStatus: bindActionCreators(actions.setLoggedInStatus, dispatch),
+    // onSetLoggedInStatus: bindActionCreators(actions.setLoggedInStatus, dispatch),
     onGetStatedButtonClick: bindActionCreators(actions.getStartedButtonClick, dispatch),
+    onLogInUser: bindActionCreators(actions.logInUser, dispatch),
+    onLogoutUser: bindActionCreators(actions.logoutUser, dispatch),
   };
 }
 

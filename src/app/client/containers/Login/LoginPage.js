@@ -37,17 +37,17 @@ export default class LoginPage extends React.Component {
     super(props);
     this.state = {
       form: {
-        surname: '', 
-        sortCode: '',
-        accountNumber: '',
-        passCode: '',
-        memorableWord: '',
+        surname: 'Denis', 
+        sortCode: '23-43-54',
+        accountNumber: '09434534343434',
+        passCode: '0943',
+        memorableWord: 'Qwteyruy',
       } };
-    this.onSubmit = this.onSubmit.bind(this);
+    // this.onSubmit = this.onSubmit.bind(this);
   }
-  onSubmit(values) {
-    console.log('Result: ', values);
-  }
+  // onSubmit(values) {
+  //   console.log('Result: ', values);
+  // }
   render() {
     return (
       <Layout>
@@ -56,14 +56,8 @@ export default class LoginPage extends React.Component {
           <p>Track all of your payments by connecting as many bank accounts as you&#39;d<br />
               like to your Nopa account and get updates on your balance instantly. Plus it&#39;s free.</p>   
           <SimpleForm
-            values={{
-              surname: '', 
-              sortCode: '',
-              accountNumber: '',
-              passCode: '',
-              memorableWord: '',
-            }}
-            submitCb={this.onSubmit}
+            values={this.state.form}
+            submitCb={this.props.onLogInUser}
           /> 
         </div>
       </Layout>

@@ -9,13 +9,13 @@ const createErrorMessage =
 
 const TextInput = props => (
   <div className={styles.formInput}>
-    <label htmlFor={props.name}>{props.name}</label>
+    <label className="text-left" htmlFor={props.name}>{props.name}</label>
     <input
       id={props.name}
       name={props.name}
       type="text"
       className={isValid(props.errors) ? '' : 'error'}
-      value={props.form}
+      value={props.value}
       onChange={props.onChange}
     />
     <div className={styles.errorPlaceholder}>{ createErrorMessage(props.errors) }</div>
@@ -24,7 +24,7 @@ const TextInput = props => (
 
 TextInput.propTypes = {
   name: React.PropTypes.string.isRequired,
-  form: React.PropTypes.object.isRequired,
+  value: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired,
   errors: React.PropTypes.array,
 };
