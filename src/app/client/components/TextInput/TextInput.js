@@ -24,13 +24,14 @@ const TextInput = props => (
 
 TextInput.propTypes = {
   name: React.PropTypes.string.isRequired,
-  form: React.PropTypes.object.isRequired,
+  form: React.PropTypes.string,
   onChange: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.array,
+  errors: React.PropTypes.object,
 };
 
 TextInput.defaultProps = {
-  errors: [],
+  form: "",
+  errors: {},
 };
 
 

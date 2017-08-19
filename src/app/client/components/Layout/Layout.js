@@ -28,7 +28,11 @@ Layout.propTypes = {
     PropTypes.array,
     PropTypes.object,
   ]).isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+};
+
+Layout.defaultProps = {
+  title: "",
 };
 
 export default Layout;

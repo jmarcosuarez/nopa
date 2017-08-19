@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextInput } from '../';
 import { isValid } from '../../containers/Login/Revalidation';
+import styles from './LoginForm.css';
 
 const LoginForm = ({
   form,
@@ -13,7 +14,7 @@ const LoginForm = ({
   submitCb,
 }) =>
   (
-    <div className="form">
+    <div className={styles.form}>
       <TextInput 
         name="surname"
         type="text"
@@ -60,18 +61,19 @@ const LoginForm = ({
   );
 
 LoginForm.propTypes = {
-  form: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.string.isRequired,
-  updateAndValidate: React.PropTypes.string.isRequired,
+  form: React.PropTypes.object.isRequired,
+  onChange: React.PropTypes.func.isRequired,
+  updateAndValidate: React.PropTypes.func.isRequired,
   validate: React.PropTypes.func.isRequired,
-  valid: React.PropTypes.func.isRequired,
+  valid: React.PropTypes.func,
   onSubmit: React.PropTypes.func.isRequired,
   submitCb: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.array,
+  errors: React.PropTypes.object,
 };
 
 LoginForm.defaultProps = {
-  errors: [],
+  errors: {},
+  valid: () => {},
 };
 
 export default LoginForm;
