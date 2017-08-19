@@ -20,7 +20,7 @@ const LoginForm = ({
         type="text"
         className={isValid(errors.surname) ? '' : 'error'}
         value={form.surname}
-        onChange={onChange}
+        onChange={updateAndValidate}
         errors={errors.surname}
       />
       <TextInput 
@@ -52,7 +52,7 @@ const LoginForm = ({
         type="text"
         className={isValid(errors.memorableWord) ? '' : 'error'}
         value={form.memorableWord}
-        onChange={onChange}
+        onChange={updateAndValidate}
         errors={errors.memorableWord}
       />
       <button onClick={() => onSubmit(submitCb)}>Submit

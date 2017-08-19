@@ -56,13 +56,7 @@ export default class LoginPage extends React.Component {
           <p>Track all of your payments by connecting as many bank accounts as you&#39;d<br />
               like to your Nopa account and get updates on your balance instantly. Plus it&#39;s free.</p>   
           <SimpleForm
-            values={{
-              surname: '', 
-              sortCode: '',
-              accountNumber: '',
-              passCode: '',
-              memorableWord: '',
-            }}
+            values={this.state.form}
             submitCb={this.onSubmit}
           /> 
         </div>
