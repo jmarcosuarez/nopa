@@ -1,7 +1,8 @@
-import { setLoggedInStatus } from './user';
+import { logInUser, logoutUser } from './user';
 import { getStartedButtonClick } from './bank';
 
 export {
-  setLoggedInStatus,
+  logInUser,
+  logoutUser,
   getStartedButtonClick,
 };

@@ -37,17 +37,17 @@ export default class LoginPage extends React.Component {
     super(props);
     this.state = {
       form: {
-        surname: '', 
-        sortCode: '',
-        accountNumber: '',
-        passCode: '',
-        memorableWord: '',
+        surname: 'Denis', 
+        sortCode: '23-43-54',
+        accountNumber: '09434534343434',
+        passCode: '0943',
+        memorableWord: 'Qwteyruy',
       } };
-    this.onSubmit = this.onSubmit.bind(this);
+    // this.onSubmit = this.onSubmit.bind(this);
   }
-  onSubmit(values) {
-    console.log('Result: ', values);
-  }
+  // onSubmit(values) {
+  //   console.log('Result: ', values);
+  // }
   render() {
     return (
       <Layout>
@@ -57,7 +57,7 @@ export default class LoginPage extends React.Component {
               like to your Nopa account and get updates on your balance instantly. Plus it&#39;s free.</p>   
           <SimpleForm
             values={this.state.form}
-            submitCb={this.onSubmit}
+            submitCb={this.props.onLogInUser}
           /> 
         </div>
       </Layout>

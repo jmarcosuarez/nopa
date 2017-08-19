@@ -3,15 +3,23 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
 };
 
-function setUserStatus(state, action) {
+function setUser(state, action) {
   const { user } = action;
-  return { ...state, user };
+  const loggedIn = { loggedIn: true };
+  return { ...state, ...user, ...loggedIn };
+}
+
+function unSetUser(state, action) {
+  const loggedIn = { loggedIn: false };
+  return { ...state, ...loggedIn };
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case actionTypes.USER_LOGGEDIN:
-      return setUserStatus(state, action);
+    case actionTypes.USER_LOGIN:
+      return setUser(state, action);
+    case actionTypes.USER_LOGOUT:
+      return unSetUser(state, action);
     default:
       return state;
   }
