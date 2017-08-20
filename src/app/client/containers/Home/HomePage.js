@@ -19,7 +19,12 @@ const HomePage = props =>
            you&#39;d like to your Nopa account and get updates on your balance instantly.</p>
            
       <div className={styles.button}>
-        <Link to={Paths.CHOOSE_BANK} className="btn btn-warning" onClick={props.onGetStatedButtonClick}>Get started</Link>
+        <Link
+          to={Paths.CHOOSE_BANK}
+          className="btn btn-warning"
+          onClick={props.onGetStatedButtonClick}>
+            Get started
+        </Link>
       </div>
     </div>
 

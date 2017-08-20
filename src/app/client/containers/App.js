@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../redux/actions';
+
 import styles from '../components/Layout/Layout.css';
 
 class App extends Component {
@@ -43,7 +44,6 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    // onSetLoggedInStatus: bindActionCreators(actions.setLoggedInStatus, dispatch),
     onGetStatedButtonClick: bindActionCreators(actions.getStartedButtonClick, dispatch),
     onLogInUser: bindActionCreators(actions.logInUser, dispatch),
     onLogoutUser: bindActionCreators(actions.logoutUser, dispatch),
