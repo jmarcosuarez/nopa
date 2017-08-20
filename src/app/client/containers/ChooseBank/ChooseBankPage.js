@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 import React from 'react';
+import { Link } from 'react-router';
 import { Layout, Button } from '../../components';
 import * as Paths from '../../constants/paths';
 import styles from './ChooseBank.css';
@@ -43,7 +44,7 @@ const ChooseBankPage = () => (
             }
       </div>
 
-      <Button to={Paths.LOGIN_BANK} className="button">Get started</Button>
+      <Link to={Paths.LOGIN_BANK} className="btn btn-warning">Get started</Link>
 
     </div>
   </Layout>

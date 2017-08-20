@@ -13,6 +13,7 @@ const Header = ({ loggedIn, onLogoutUser, onLogInUser }) => {
   const navButtons = loggedIn ? (
     <div className="btn-toolbar">
       <Link to={Paths.HOME} className="btn btn-primary" onClick={onLogoutUser}>Logout</Link>
+      <Link to={Paths.STATEMENT} className="btn btn-warning">Statement Page</Link>
     </div>
   ) : (
     <div className="btn-toolbar">
