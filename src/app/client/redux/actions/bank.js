@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-fetch';
 import * as actionTypes from '../actions/actionTypes';
 
 /**
@@ -14,4 +15,23 @@ export function getStartedButtonClick(loggedInStatus) {
   //   type: actionTypes.STARTED_BUTTON_CLICK,
   //   loggedInStatus,
   // };
+}
+function setTransactions(transactions) {
+  return {
+    type: actionTypes.FETCH_TRANSACTIONS,
+    transactions,
+  };
+}
+/**
+ * Called synchronously from user action file
+ * While redirecting to '/statement', fetch transactions to populate the list that contains!
+ */
+export function fetchTransactions() {
+  return (dispatch) => {
+    fetch(`http://localhost:3001/api`)
+      .then(response => response.json())
+      .then((transactions) => {
+        dispatch(setTransactions(transactions));
+      });
+  };
 }
