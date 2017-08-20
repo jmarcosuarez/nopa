@@ -1,5 +1,6 @@
 /* eslint-disable no-confusing-arrow */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { compose, head } from 'ramda';
 import { isValid } from '../../containers/Login/Revalidation';
 import styles from './TextInput.css';
@@ -23,10 +24,10 @@ const TextInput = props => (
   );
 
 TextInput.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.array,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  errors: PropTypes.array,
 };
 
 TextInput.defaultProps = {

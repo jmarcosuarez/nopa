@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TextInput } from '../';
 import { isValid } from '../../containers/Login/Revalidation';
 import styles from './LoginForm.css';
@@ -61,14 +62,14 @@ const LoginForm = ({
   );
 
 LoginForm.propTypes = {
-  form: React.PropTypes.object.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  updateAndValidate: React.PropTypes.func.isRequired,
-  validate: React.PropTypes.func.isRequired,
-  valid: React.PropTypes.func,
-  onSubmit: React.PropTypes.func.isRequired,
-  submitCb: React.PropTypes.func.isRequired,
-  errors: React.PropTypes.object,
+  form: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  updateAndValidate: PropTypes.func.isRequired,
+  validate: PropTypes.func.isRequired,
+  valid: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
+  submitCb: PropTypes.func.isRequired,
+  errors: PropTypes.object,
 };
 
 LoginForm.defaultProps = {

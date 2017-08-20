@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { compose, curry, pick, prop } from 'ramda';
 import { validate } from 'spected';
 import { Layout, LoginForm } from '../../components';
@@ -32,7 +33,7 @@ const SimpleForm = revalidation(
   },
 )(LoginForm);
 
-export default class LoginPage extends React.Component {
+export default class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -43,11 +44,8 @@ export default class LoginPage extends React.Component {
         passCode: '0943',
         memorableWord: 'Qwteyruy',
       } };
-    // this.onSubmit = this.onSubmit.bind(this);
   }
-  // onSubmit(values) {
-  //   console.log('Result: ', values);
-  // }
+
   render() {
     return (
       <Layout>
@@ -64,3 +62,11 @@ export default class LoginPage extends React.Component {
     );
   }
 }
+
+LoginPage.propTypes = {
+  onLogInUser: PropTypes.func,
+};
+
+LoginPage.defaultProps = {
+  onLogInUser: () => {},
+};

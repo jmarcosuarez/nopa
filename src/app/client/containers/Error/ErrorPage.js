@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Layout } from '../../components';
 
 const errors = {
@@ -39,7 +40,7 @@ class ErrorPage extends React.Component {
 }
 
 ErrorPage.propTypes = {
-  route: React.PropTypes.element.isRequired,
+  route: PropTypes.element.isRequired,
 };
 
 export default ErrorPage;

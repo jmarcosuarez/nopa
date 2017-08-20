@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Header, Footer, Partners } from '../';
 import styles from './Layout.css';
 
