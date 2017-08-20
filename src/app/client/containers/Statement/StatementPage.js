@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
+import { prop } from 'ramda';
 import * as actions from '../../redux/actions';
 import * as transactionsSelectors from '../../redux/reducers/bank';
 
@@ -12,7 +13,14 @@ import { Layout, Button, AccDetails, ListView, ListRow } from '../../components'
 class StatementPage extends Component {
   componentDidMount() {
     // this will be here only for testing purposes
-    this.props.onFetchTransactions();
+    this.props.onLogInUser({
+      surname: 'Denis', 
+      sortCode: '23-43-54',
+      accountNumber: '09434534343434',
+      passCode: '0943',
+      memorableWord: 'Qwteyruy',
+      choosenBank: 'Natwest',
+    });
   }
   renderLoading() {
     return (
@@ -41,7 +49,10 @@ class StatementPage extends Component {
           <p>Track all of your payments by connecting as many bank accounts as you&#39;d<br />
               like to your Nopa account and get updates on your balance instantly. Plus it&#39;s free.</p>   
 
-          <AccDetails />
+          <AccDetails
+            account={prop('accountNumber', this.props.user)}
+            surname={prop('surname', this.props.user)}
+            choosenBank={prop('choosenBank', this.props.user)} />
 
           <ListView
             rowsIdArray={this.props.transactionsIdArray}
@@ -59,27 +70,33 @@ class StatementPage extends Component {
 } 
 
 StatementPage.propTypes = {
-  onFetchTransactions: PropTypes.func.isRequired,
+  // onFetchTransactions: PropTypes.func.isRequired,
+  onLogInUser: PropTypes.func.isRequired,
   transactionsById: PropTypes.array,
   transactionsIdArray: PropTypes.array,
+  user: PropTypes.object,
 };
 
 StatementPage.defaultProps = {
   transactionsById: [],
   transactionsIdArray: [],
+  user: {},
 };
 
 function mapStateToProps(state) {
   const [transactionsById, transactionsIdArray] = transactionsSelectors.getTransactions(state);
+  const { user } = state;
   return {
     transactionsById,
     transactionsIdArray,
+    user,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     onFetchTransactions: bindActionCreators(actions.fetchTransactions, dispatch),
+    onLogInUser: bindActionCreators(actions.logInUser, dispatch),
   };
 }
 

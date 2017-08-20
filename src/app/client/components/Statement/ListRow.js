@@ -7,4 +7,9 @@ const ListRow = props =>
     {props.children}
   </div>;
 
+
+ListRow.propTypes = {
+  children: PropTypes.array.isRequired,
+};
+
 export default ListRow;
