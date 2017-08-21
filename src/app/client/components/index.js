@@ -8,7 +8,7 @@ import LoginForm from './LoginForm/LoginForm';
 import AccDetails from './Statement/AccDetails';
 import ListView from './Statement/ListView';
 import ListRow from './Statement/ListRow';
-import BankListItem from './Banks/BankListItem';
+import BankListItem from './BankListItem/BankListItem';
 
 export { 
   Layout,
