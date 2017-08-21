@@ -11,17 +11,16 @@ import styles from './Statement.css';
 import { Layout, Button, AccDetails, ListView, ListRow } from '../../components';
 
 class StatementPage extends Component {
-  componentDidMount() {
-    // this will be here only for testing purposes
-    this.props.onLogInUser({
-      surname: 'Denis', 
-      sortCode: '23-43-54',
-      accountNumber: '09434534343434',
-      passCode: '0943',
-      memorableWord: 'Qwteyruy',
-      choosenBank: 'Natwest',
-    });
-  }
+  // componentDidMount() {
+  //   // this will be here only for testing purposes
+  //   this.props.onLogInUser({
+  //     surname: 'Denis', 
+  //     sortCode: '23-43-54',
+  //     accountNumber: '09434534343434',
+  //     passCode: '0943',
+  //     memorableWord: 'Qwteyruy',
+  //   });
+  // }
   renderLoading() {
     return (
       <p>Loading...</p>
@@ -52,7 +51,7 @@ class StatementPage extends Component {
           <AccDetails
             account={prop('accountNumber', this.props.user)}
             surname={prop('surname', this.props.user)}
-            choosenBank={prop('choosenBank', this.props.user)} />
+            choosenBank={prop('choosenBank', this.props.bank)} />
 
           <ListView
             rowsIdArray={this.props.transactionsIdArray}
@@ -71,25 +70,29 @@ class StatementPage extends Component {
 
 StatementPage.propTypes = {
   // onFetchTransactions: PropTypes.func.isRequired,
-  onLogInUser: PropTypes.func.isRequired,
+  // onLogInUser: PropTypes.func.isRequired,
   transactionsById: PropTypes.array,
   transactionsIdArray: PropTypes.array,
   user: PropTypes.object,
+  bank: PropTypes.object,
 };
 
 StatementPage.defaultProps = {
   transactionsById: [],
   transactionsIdArray: [],
   user: {},
+  bank: {},
 };
 
 function mapStateToProps(state) {
   const [transactionsById, transactionsIdArray] = transactionsSelectors.getTransactions(state);
   const { user } = state;
+  const { bank } = state;
   return {
     transactionsById,
     transactionsIdArray,
     user,
+    bank,
   };
 }
 

@@ -1,8 +1,14 @@
 /* eslint-disable global-require */
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import { Layout, Button } from '../../components';
 import * as Paths from '../../constants/paths';
+import {
+  Layout,
+  Button,
+  BankListItem,
+} from '../../components';
+
 import styles from './ChooseBank.css';
 
 const bankList = [{
@@ -31,23 +37,41 @@ const bankList = [{
 },
 ];
 
-const ChooseBankPage = () => (
-  <Layout title="Choose your bank!">
-    <div className={styles.main}>
-      <h1>Which bank does this account belong to?</h1>
-      <p>Track all of your payments by connecting as many bank accounts as you&#39;d like to your Nopa<br />
-          account and get updates on your balance instantly.</p>
+class ChooseBankPage extends Component {
+  renderBankListItem = bank =>
+    <BankListItem
+      key={bank.name}
+      onSelectBank={this.props.onSetChoosenBank}
+      alt={bank.name}
+      src={bank.logo}
+    />;
 
-      <div className={styles.bankList}>
-        {
-              bankList.map(bank => <div key={bank.name}><img alt={bank.name} src={bank.logo} /></div>)
-            }
-      </div>
+  render() {
+    return (
+      <Layout title="Choose your bank!">
+        <div className={styles.main}>
+          <h1>Which bank does this account belong to?</h1>
+          <p>Track all of your payments by connecting as many bank accounts as you&#39;d like to your Nopa<br />
+              account and get updates on your balance instantly.</p>
 
-      <Link to={Paths.LOGIN_BANK} className="btn btn-warning">Get started</Link>
+          <div className={styles.bankList}>
+            {bankList.map(this.renderBankListItem)}
+          </div>
 
-    </div>
-  </Layout>
-  );
+          <Link to={Paths.LOGIN_BANK} className="btn btn-warning">Get started</Link>
+
+        </div>
+      </Layout>
+    );
+  }
+}
+
+ChooseBankPage.propTypes = {
+  onSetChoosenBank: PropTypes.func,
+};
+
+ChooseBankPage.defaultProps = {
+  onSetChoosenBank: () => {},
+};
 
 export default ChooseBankPage;

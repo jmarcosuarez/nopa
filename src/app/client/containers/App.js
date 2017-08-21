@@ -44,7 +44,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onGetStatedButtonClick: bindActionCreators(actions.getStartedButtonClick, dispatch),
+    // onGetStatedButtonClick: bindActionCreators(actions.getStartedButtonClick, dispatch),
+    onSetChoosenBank: bindActionCreators(actions.setChoosenBank, dispatch),
     onLogInUser: bindActionCreators(actions.logInUser, dispatch),
     onLogoutUser: bindActionCreators(actions.logoutUser, dispatch),
   };

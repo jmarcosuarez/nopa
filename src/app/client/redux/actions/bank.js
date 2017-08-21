@@ -9,12 +9,11 @@ import * as actionTypes from '../actions/actionTypes';
     3. If user is not loggedIn and has a bank selected -> take him to form page instead
     then
   */
-export function getStartedButtonClick(loggedInStatus) {
-  console.log('getStartedButtonClick action called');
-  // return {
-  //   type: actionTypes.STARTED_BUTTON_CLICK,
-  //   loggedInStatus,
-  // };
+export function setChoosenBank(choosenBank) {
+  return {
+    type: actionTypes.BANK_SELECT,
+    choosenBank,
+  };
 }
 function setTransactions(transactions) {
   return {
