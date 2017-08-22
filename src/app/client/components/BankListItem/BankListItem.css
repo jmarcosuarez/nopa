@@ -1,4 +1,7 @@
 .bankListItem {
+  padding: 0;
+  border: none;
+  background: none;
   background-color: white;
   padding: 10px;
   width: 159px;
@@ -10,10 +13,18 @@
 
   & > img {
     filter: grayscale(100%);
-    & .selected {
+/*    & .selected {
+      filter: grayscale(0%);
+    }*/
+    width: 85%;
+    justify-content: center;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 18px 35px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
+    & > img {
       filter: grayscale(0%);
     }
-    width: 100%;
-    justify-content: center;
   }
 }

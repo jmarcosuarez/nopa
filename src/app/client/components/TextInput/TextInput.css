@@ -14,7 +14,6 @@
   & + & {
     margin-top: 1rem;
   }
-
   & label {
    display: inline-block;
    margin-top: 2rem;
@@ -23,7 +22,6 @@
    text-transform: uppercase;
    touch-action: manipulation;
   }
-
   & input {
    display: block;
    padding: .5rem .75rem;
@@ -40,12 +38,11 @@
    border-left: 0;
    border-radius: 0.1rem;
    /*@include transition;*/
-   
+
    &:focus {
     outline: 0;
     box-shadow: none;
     border-bottom-color: var(--color-darkblue);
    }
   }
-
 }

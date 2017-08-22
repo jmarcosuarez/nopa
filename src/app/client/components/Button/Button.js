@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 import styles from './Button.css';
 
 const Button = props => (
-  <div className="">
-    <Link {...props} className={styles.button}>
+  <div className={styles.buttonWrapper}>
+    <Link {...props} className={`btn ${styles.button}`}>
       {props.children}
     </Link>
   </div>

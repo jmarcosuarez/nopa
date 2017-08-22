@@ -10,31 +10,3 @@
   box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
 }
 
-.btn {
- display: inline-block;
- padding: .75rem 2rem;
- margin-top: 1.618rem;
- font-weight: 400;
- text-align: center;
- text-transform: uppercase;
- color: #fff;
- vertical-align: middle;
- white-space: nowrap;
- background-color: var(--color-lightblue);
- border: 1px solid transparent;
- box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
- cursor: pointer;
- user-select: none;
- /*@include transition;*/
- 
- &:focus,
- &:hover {
-  background-color: color(var(--color-lightblue) a(13%)); /* As rgba(255, 0, 0, .13)*/
-  box-shadow: 0 18px 35px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
- }
- 
- &:focus {
-  outline: 0;
- }
-}
-

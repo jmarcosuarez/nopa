@@ -1,7 +1,6 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
 import * as Paths from '../../constants/paths';
 import {
   Layout,
@@ -58,8 +57,7 @@ class ChooseBankPage extends Component {
             {bankList.map(this.renderBankListItem)}
           </div>
 
-          <Link to={Paths.LOGIN_BANK} className="btn btn-warning">Get started</Link>
-
+          <Button to={Paths.LOGIN_BANK}>Get started</Button>
         </div>
       </Layout>
     );

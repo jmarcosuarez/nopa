@@ -18,14 +18,10 @@ const HomePage = props =>
       <p>Track all of your payments by connecting as many bank accounts as<br />
            you&#39;d like to your Nopa account and get updates on your balance instantly.</p>
            
-      <div className={styles.button}>
-        <Link
-          to={Paths.CHOOSE_BANK}
-          className="btn btn-warning"
-          onClick={props.onGetStatedButtonClick}>
+      <Button
+          to={Paths.CHOOSE_BANK}>
             Get started
-        </Link>
-      </div>
+        </Button>
     </div>
 
     <div className={styles.secondary}>

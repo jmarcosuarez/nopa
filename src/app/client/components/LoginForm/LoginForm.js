@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextInput } from '../';
+import { TextInput, Button } from '../';
 import { isValid } from '../../containers/Login/Revalidation';
 import styles from './LoginForm.css';
 
@@ -56,8 +56,7 @@ const LoginForm = ({
         onChange={updateAndValidate}
         errors={errors.memorableWord}
       />
-      <button className={styles.btn} onClick={() => onSubmit(submitCb)}>Submit
-    </button>
+      <Button onClick={() => onSubmit(submitCb)}>LogIn & Connect</Button>
     </div>
   );
 
