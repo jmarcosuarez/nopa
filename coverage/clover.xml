@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1503414912097" clover="3.2.0">
+  <project timestamp="1503414912098" name="All files">
+    <metrics statements="167" coveredstatements="86" conditionals="52" coveredconditionals="6" methods="83" coveredmethods="16" elements="302" coveredelements="108" complexity="0" loc="167" ncloc="167" packages="19" files="27" classes="27">
+      <package name="client.components">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.js" path="/home/ms/Projects/nopa/src/app/client/components/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="client.components.BankListItem">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="BankListItem.js" path="/home/ms/Projects/nopa/src/app/client/components/BankListItem/BankListItem.js">
+          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.Button">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="Button.js" path="/home/ms/Projects/nopa/src/app/client/components/Button/Button.js">
+          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="6" count="5" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="14" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.Footer">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="Footer.js" path="/home/ms/Projects/nopa/src/app/client/components/Footer/Footer.js">
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.Header">
+        <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <file name="Header.js" path="/home/ms/Projects/nopa/src/app/client/components/Header/Header.js">
+          <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="12" count="5" type="stmt"/>
+          <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="34" count="5" type="stmt"/>
+          <line num="40" count="5" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.Layout">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="Layout.js" path="/home/ms/Projects/nopa/src/app/client/components/Layout/Layout.js">
+          <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="27" count="5" type="stmt"/>
+          <line num="35" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.LoginForm">
+        <metrics statements="5" coveredstatements="3" conditionals="11" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <file name="LoginForm.js" path="/home/ms/Projects/nopa/src/app/client/components/LoginForm/LoginForm.js">
+          <metrics statements="5" coveredstatements="3" conditionals="11" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="63" count="5" type="stmt"/>
+          <line num="74" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.Partners">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="Partners.js" path="/home/ms/Projects/nopa/src/app/client/components/Partners/Partners.js">
+          <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="22" count="5" type="stmt"/>
+          <line num="23" count="20" type="stmt"/>
+          <line num="26" count="5" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.Statement">
+        <metrics statements="14" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <file name="AccDetails.js" path="/home/ms/Projects/nopa/src/app/client/components/Statement/AccDetails.js">
+          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="12" count="5" type="stmt"/>
+          <line num="19" count="5" type="stmt"/>
+        </file>
+        <file name="ListRow.js" path="/home/ms/Projects/nopa/src/app/client/components/Statement/ListRow.js">
+          <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="11" count="5" type="stmt"/>
+        </file>
+        <file name="ListView.js" path="/home/ms/Projects/nopa/src/app/client/components/Statement/ListView.js">
+          <metrics statements="7" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="33" count="5" type="stmt"/>
+          <line num="40" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.components.TextInput">
+        <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="TextInput.js" path="/home/ms/Projects/nopa/src/app/client/components/TextInput/TextInput.js">
+          <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="9" count="5" type="cond" truecount="0" falsecount="2"/>
+          <line num="11" count="5" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="26" count="5" type="stmt"/>
+          <line num="33" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.constants">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="paths.js" path="/home/ms/Projects/nopa/src/app/client/constants/paths.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="3" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.containers.ChooseBank">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <file name="ChooseBankPage.js" path="/home/ms/Projects/nopa/src/app/client/containers/ChooseBank/ChooseBankPage.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="41" count="6" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="67" count="1" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.containers.Error">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <file name="ErrorPage.js" path="/home/ms/Projects/nopa/src/app/client/containers/Error/ErrorPage.js">
+          <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.containers.Home">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="HomePage.js" path="/home/ms/Projects/nopa/src/app/client/containers/Home/HomePage.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.containers.Login">
+        <metrics statements="50" coveredstatements="18" conditionals="23" coveredconditionals="5" methods="34" coveredmethods="5"/>
+        <file name="LoginPage.js" path="/home/ms/Projects/nopa/src/app/client/containers/Login/LoginPage.js">
+          <metrics statements="14" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="3"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="70" count="1" type="stmt"/>
+        </file>
+        <file name="Revalidation.js" path="/home/ms/Projects/nopa/src/app/client/containers/Login/Revalidation.js">
+          <metrics statements="33" coveredstatements="5" conditionals="11" coveredconditionals="5" methods="20" coveredmethods="2"/>
+          <line num="8" count="5" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="18" count="5" type="stmt"/>
+          <line num="21" count="0" type="cond" truecount="1" falsecount="0"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="62" count="0" type="cond" truecount="0" falsecount="1"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="78" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="79" count="1" type="stmt"/>
+        </file>
+        <file name="isValid.js" path="/home/ms/Projects/nopa/src/app/client/containers/Login/isValid.js">
+          <metrics statements="3" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="10" count="5" type="cond" truecount="0" falsecount="3"/>
+          <line num="19" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="28" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.containers.Statement">
+        <metrics statements="11" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <file name="StatementPage.js" path="/home/ms/Projects/nopa/src/app/client/containers/Statement/StatementPage.js">
+          <metrics statements="11" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
+          <line num="80" count="1" type="stmt"/>
+          <line num="88" count="1" type="stmt"/>
+          <line num="89" count="1" type="stmt"/>
+          <line num="90" count="1" type="stmt"/>
+          <line num="91" count="1" type="stmt"/>
+          <line num="100" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.redux.actions">
+        <metrics statements="24" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <file name="actionTypes.js" path="/home/ms/Projects/nopa/src/app/client/redux/actions/actionTypes.js">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="3" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="5" type="stmt"/>
+          <line num="8" count="5" type="stmt"/>
+          <line num="9" count="5" type="stmt"/>
+          <line num="10" count="5" type="stmt"/>
+        </file>
+        <file name="bank.js" path="/home/ms/Projects/nopa/src/app/client/redux/actions/bank.js">
+          <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+        </file>
+        <file name="index.js" path="/home/ms/Projects/nopa/src/app/client/redux/actions/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+        <file name="user.js" path="/home/ms/Projects/nopa/src/app/client/redux/actions/user.js">
+          <metrics statements="9" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="client.redux.reducers">
+        <metrics statements="11" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <file name="bank.js" path="/home/ms/Projects/nopa/src/app/client/redux/reducers/bank.js">
+          <metrics statements="11" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="1"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+        </file>
+        <file name="initialState.js" path="/home/ms/Projects/nopa/src/app/client/redux/reducers/initialState.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="utils">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="auth.js" path="/home/ms/Projects/nopa/src/app/utils/auth.js">
+          <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

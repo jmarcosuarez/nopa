@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly should render correctly 1`] = `
+<button
+  className="bankListItem"
+  onClick={[Function]}
+>
+  <img
+    alt="Santander"
+    src="./"
+  />
+</button>
+`;
