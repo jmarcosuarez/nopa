@@ -144,3 +144,61 @@ exports[`Renders correctly 1`] = `
   </footer>
 </section>
 `;
+
+exports[`Renders correctly should render correctly 1`] = `
+<Layout
+  title="Choose your bank!"
+>
+  <div
+    className="main"
+  >
+    <h1>
+      Which bank does this account belong to?
+    </h1>
+    <p>
+      Track all of your payments by connecting as many bank accounts as you'd like to your Nopa
+      <br />
+      account and get updates on your balance instantly.
+    </p>
+    <div
+      className="bankList"
+    >
+      <BankListItem
+        alt="Barclays"
+        onSelectBank={[Function]}
+        src="test-file-stub"
+      />
+      <BankListItem
+        alt="Natwest"
+        onSelectBank={[Function]}
+        src="test-file-stub"
+      />
+      <BankListItem
+        alt="Lloyds"
+        onSelectBank={[Function]}
+        src="test-file-stub"
+      />
+      <BankListItem
+        alt="HSBC"
+        onSelectBank={[Function]}
+        src="test-file-stub"
+      />
+      <BankListItem
+        alt="TSB"
+        onSelectBank={[Function]}
+        src="test-file-stub"
+      />
+      <BankListItem
+        alt="Santander"
+        onSelectBank={[Function]}
+        src="test-file-stub"
+      />
+    </div>
+    <Button
+      to="/login"
+    >
+      Get started
+    </Button>
+  </div>
+</Layout>
+`;

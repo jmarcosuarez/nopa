@@ -1,11 +1,14 @@
+/* eslint-disable no-undef */
 import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import ErrorPage from './ErrorPage';
-import renderer from 'react-test-renderer';
 
-test('Renders correctly', () => {
-  const tree = renderer.create(
-    <ErrorPage route={{ error: '404' }} />
-  ).toJSON();
-
-  expect(tree).toMatchSnapshot();
+describe('Renders correctly', () => {
+  it('should render correctly', () => {
+    const output = shallow(
+      <ErrorPage route={{ error: '404' }} />,
+    );
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
 });

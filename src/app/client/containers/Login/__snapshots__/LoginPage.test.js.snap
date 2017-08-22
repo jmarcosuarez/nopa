@@ -202,3 +202,34 @@ exports[`Renders correctly 1`] = `
   </footer>
 </section>
 `;
+
+exports[`Renders correctly should render correctly 1`] = `
+<Layout
+  title=""
+>
+  <div
+    className="main"
+  >
+    <h1>
+      Which bank does this account belong to?
+    </h1>
+    <p>
+      Track all of your payments by connecting as many bank accounts as you'd
+      <br />
+      like to your Nopa account and get updates on your balance instantly. Plus it's free.
+    </p>
+    <Revalidation_(LoginForm)
+      submitCb={[Function]}
+      values={
+        Object {
+          "accountNumber": "09434534343434",
+          "memorableWord": "Qwteyruy",
+          "passCode": "0943",
+          "sortCode": "23-43-54",
+          "surname": "Denis",
+        }
+      }
+    />
+  </div>
+</Layout>
+`;

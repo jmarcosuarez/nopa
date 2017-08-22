@@ -141,3 +141,65 @@ exports[`Renders correctly 1`] = `
   </footer>
 </section>
 `;
+
+exports[`Renders correctly should render correctly 1`] = `
+<Layout
+  title="Welcome to Nopa!"
+>
+  <div
+    className="main"
+  >
+    <div
+      className="logo"
+    >
+      <Link
+        className=""
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        title="Home"
+        to="/"
+      >
+        <img
+          alt="Logo"
+          className="Nopa"
+          src="test-file-stub"
+        />
+      </Link>
+    </div>
+    <h1>
+      Your finances, in one place
+    </h1>
+    <p>
+      Track all of your payments by connecting as many bank accounts as
+      <br />
+      you'd like to your Nopa account and get updates on your balance instantly.
+    </p>
+    <Button
+      to="/choose-bank"
+    >
+      Get started
+    </Button>
+  </div>
+  <div
+    className="secondary"
+  >
+    <div>
+      <div>
+        <h1>
+          There is no such things as "one size fits all" finance.
+        </h1>
+        <p>
+          We were founded to make money simple and fair for everyone: whether you are looking for a loan, or to get better rewards for your investments.
+        </p>
+      </div>
+      <div>
+        <img
+          alt="Shapes"
+          className="shapes"
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
+`;

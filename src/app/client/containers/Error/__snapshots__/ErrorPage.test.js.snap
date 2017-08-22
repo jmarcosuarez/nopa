@@ -89,3 +89,18 @@ exports[`Renders correctly 1`] = `
   </footer>
 </section>
 `;
+
+exports[`Renders correctly should render correctly 1`] = `
+<Layout
+  title=""
+>
+  <div>
+    <h1>
+      Page not found!
+    </h1>
+    <div>
+      This page is either no longer available or you have entered a wrong path.
+    </div>
+  </div>
+</Layout>
+`;

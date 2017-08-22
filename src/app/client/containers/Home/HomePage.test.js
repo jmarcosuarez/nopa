@@ -1,11 +1,14 @@
+/* eslint-disable no-undef */
 import React from 'react';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json';
 import HomePage from './HomePage';
-import renderer from 'react-test-renderer';
 
-test('Renders correctly', () => {
-  const tree = renderer.create(
-    <HomePage />
-  ).toJSON();
-
-  expect(tree).toMatchSnapshot();
+describe('Renders correctly', () => {
+  it('should render correctly', () => {
+    const output = shallow(
+      <HomePage />,
+    );
+    expect(shallowToJson(output)).toMatchSnapshot();
+  });
 });

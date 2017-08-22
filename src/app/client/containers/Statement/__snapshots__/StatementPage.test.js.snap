@@ -80,3 +80,76 @@ exports[`Renders correctly 1`] = `
   </footer>
 </section>
 `;
+
+exports[`Renders correctly should render correctly 1`] = `
+<StatementPage
+  bank={
+    Object {
+      "choosenBank": "HCBC",
+      "transactions": Array [
+        Object {
+          "beneficary": "PAYPAL ZARA",
+          "dateStr": "Now",
+          "id": 1,
+          "value": "- £35.98",
+        },
+      ],
+    }
+  }
+  onFetchTransactions={[Function]}
+  onLogInUser={[Function]}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "notify": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": null,
+    }
+  }
+  transactionsById={
+    Array [
+      Object {
+        "beneficary": "PAYPAL ZARA",
+        "dateStr": "Now",
+        "id": 1,
+        "value": "- £35.98",
+      },
+    ]
+  }
+  transactionsIdArray={
+    Array [
+      "0",
+    ]
+  }
+  user={
+    Object {
+      "accountNumber": "09434534343434",
+      "loggedIn": false,
+      "memorableWord": "Qwteyruy",
+      "passCode": "0943",
+      "sortCode": "23-43-54",
+      "surname": "Denis",
+    }
+  }
+/>
+`;
