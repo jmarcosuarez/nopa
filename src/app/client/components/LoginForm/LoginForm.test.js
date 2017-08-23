@@ -12,12 +12,12 @@ test('should render correctly', () => {
       transactions: [
         { id: 1, dateStr: "Now", beneficary: "PAYPAL ZARA", value: "- £35.98" },
       ],
-    } 
+    },
   };
   const wrapper = shallow(
     <LoginForm
       form={object}
-      value='memorableWorld'
+      value="memorableWorld"
       onChange={fc}
       updateAndValidate={fc}
       validate={fc}
@@ -25,7 +25,7 @@ test('should render correctly', () => {
       onSubmit={fc}
       submitCb={fc}
       errors={object}
-    />
+    />,
 );
   expect(toJson(wrapper)).toMatchSnapshot();
 });

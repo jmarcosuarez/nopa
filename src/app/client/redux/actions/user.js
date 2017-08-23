@@ -3,7 +3,7 @@ import * as actionTypes from '../actions/actionTypes';
 import auth from '../../../utils/auth';
 import { fetchTransactions } from './bank';
 
-function saveUser(user) {
+export function saveUser(user) {
   return {
     type: actionTypes.USER_LOGIN,
     user,

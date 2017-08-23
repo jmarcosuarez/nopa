@@ -15,7 +15,7 @@ export function setChoosenBank(choosenBank) {
     choosenBank,
   };
 }
-function setTransactions(transactions) {
+export function setTransactions(transactions) {
   return {
     type: actionTypes.FETCH_TRANSACTIONS,
     transactions,
