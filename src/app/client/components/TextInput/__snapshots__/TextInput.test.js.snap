@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="formInput"
+>
+  <label
+    className="text-left"
+    htmlFor="Denis"
+  >
+    Denis
+  </label>
+  <input
+    className=""
+    id="Denis"
+    name="Denis"
+    onChange={[Function]}
+    type="text"
+    value="Denis"
+  />
+  <div
+    className="errorPlaceholder"
+  />
+</div>
+`;

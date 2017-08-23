@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly should render correctly 1`] = `
+<div
+  className="buttonWrapper"
+>
+  <Link
+    className="btn button"
+    onlyActiveOnIndex={false}
+    style={Object {}}
+  >
+    Send
+  </Link>
+</div>
+`;

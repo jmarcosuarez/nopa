@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<section>
+  <Connect(Header) />
+  <div
+    className="layout"
+  >
+    Header
+  </div>
+  <Partners />
+  <Footer />
+</section>
+`;

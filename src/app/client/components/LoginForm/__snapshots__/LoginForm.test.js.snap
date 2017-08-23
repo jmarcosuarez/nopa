@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="form"
+>
+  <TextInput
+    className=""
+    errors={Array []}
+    name="surname"
+    onChange={[Function]}
+    type="text"
+  />
+  <TextInput
+    className=""
+    errors={Array []}
+    name="sortCode"
+    onChange={[Function]}
+    type="text"
+  />
+  <TextInput
+    className=""
+    errors={Array []}
+    name="accountNumber"
+    onChange={[Function]}
+    type="text"
+  />
+  <TextInput
+    className=""
+    errors={Array []}
+    name="passCode"
+    onChange={[Function]}
+    type="text"
+  />
+  <TextInput
+    className=""
+    errors={Array []}
+    name="memorableWord"
+    onChange={[Function]}
+    type="text"
+  />
+  <Button
+    onClick={[Function]}
+  >
+    LogIn & Connect
+  </Button>
+</div>
+`;
