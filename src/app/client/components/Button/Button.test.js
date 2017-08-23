@@ -1,14 +1,12 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
+import toJson from 'enzyme-to-json';
 import Button from './Button';
 
-describe('Renders correctly', () => {
-  it('should render correctly', () => {
-    const output = shallow(
-      <Button>Send</Button>,
-    );
-    expect(shallowToJson(output)).toMatchSnapshot();
-  });
+test('Renders correctly', () => {
+  const wrapper = shallow(
+    <Button>Send</Button>,
+  );
+  expect(toJson(wrapper)).toMatchSnapshot();
 });

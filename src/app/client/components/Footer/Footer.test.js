@@ -1,14 +1,12 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import { shallow } from 'enzyme';
-import { shallowToJson } from 'enzyme-to-json';
+import toJson from 'enzyme-to-json';
 import Footer from './Footer';
 
-describe('Renders correctly', () => {
-  it('should render correctly', () => {
-    const output = shallow(
-      <Footer />,
-    );
-    expect(shallowToJson(output)).toMatchSnapshot();
-  });
+test('Renders correctly', () => {
+  const wrapper = shallow(
+    <Footer />,
+  );
+  expect(toJson(wrapper)).toMatchSnapshot();
 });
