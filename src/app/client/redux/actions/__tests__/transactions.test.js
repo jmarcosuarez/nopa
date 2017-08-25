@@ -24,7 +24,6 @@ describe('BankActions', () => {
     // Initialize mockstore with empty state
     const initialState = {};
     const store = mockStore(initialState);
-
     global.window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve(mockResponse(200, null, `{transactions:[{ "id": 1 }] }`)));
 
@@ -32,7 +31,7 @@ describe('BankActions', () => {
       .then(() => {
         const expectedActions = store.getActions();
         expect(expectedActions.length).toBe(1);
-        // expect(expectedActions).toContainEqual({ type: actionTypes.FETCH_TRANSACTIONS, transactions });
+        // expect(expectedActions).toEqual({ type: actionTypes.FETCH_TRANSACTIONS, transactions });
       });
   });
 });
