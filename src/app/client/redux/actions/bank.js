@@ -26,11 +26,13 @@ export function setTransactions(transactions) {
  * While redirecting to '/statement', fetch transactions to populate the list that contains!
  */
 export function fetchTransactions() {
-  return (dispatch) => {
-    fetch(`http://localhost:3001/api`)
+  return (dispatch, getState) => {
+    if (getState().transactions) {
+      return; // No need to fetch
+    }
+    /* eslint-disable consistent-return */
+    return fetch(`http://localhost:3001/api`)
       .then(response => response.json())
-      .then((transactions) => {
-        dispatch(setTransactions(transactions));
-      });
+      .then(transactions => dispatch(setTransactions(transactions)));
   };
 }
