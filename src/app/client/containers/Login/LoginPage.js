@@ -13,11 +13,11 @@ const isLengthGreaterThan = len => compose(isGreaterThan(len), prop('length'));
 
 const basicValidationRules = {
   surname: [
-    [isNotEmpty, 'Name should not be empty.'],
+    [isNotEmpty, 'Surname should not be empty.'],
   ],
   memorableWord: [
-    [isLengthGreaterThan(7), 'Minimum Random length of 8 is required.'],
-    [hasCapitalLetter, 'Random should contain at least one uppercase letter.'],
+    [isLengthGreaterThan(7), 'Minimum MemorableWord length of 8 is required.'],
+    [hasCapitalLetter, 'MemorableWord should contain at least one uppercase letter.'],
   ],
 };
 
