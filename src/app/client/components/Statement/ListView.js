@@ -4,13 +4,7 @@ import { map, nth } from 'ramda';
 import styles from './Styles.css';
 
 export default class ListView extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   renderRowThroughProps(rowId) {
-    // console.log("rowid:", rowId);
-    // console.log('this.props.rowsById:', this.props.rowsById);
-    // console.log('picking:', nth(rowId, this.props.rowsById));
     if (typeof this.props.renderRow === 'function') {
       return this.props.renderRow(rowId, nth(rowId, this.props.rowsById));
     }

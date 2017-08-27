@@ -71,10 +71,10 @@ class StatementPage extends Component {
 StatementPage.propTypes = {
   // onFetchTransactions: PropTypes.func.isRequired,
   // onLogInUser: PropTypes.func.isRequired,
-  transactionsById: PropTypes.array,
-  transactionsIdArray: PropTypes.array,
-  user: PropTypes.object,
-  bank: PropTypes.object,
+  transactionsById: PropTypes.array.isRequired,
+  transactionsIdArray: PropTypes.array.isRequired,
+  user: PropTypes.object.isRequired,
+  bank: PropTypes.object.isRequired,
 };
 
 StatementPage.defaultProps = {
