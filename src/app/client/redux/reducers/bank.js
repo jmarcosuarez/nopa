@@ -22,6 +22,7 @@ export default function bank(state = initialState.bank, action) {
   }
 }
 
+/*  Selectors */
 export function getTransactions(state) {
   const transactionsById = state.bank.transactions;
   const transactionsIdArray = keys(transactionsById);
