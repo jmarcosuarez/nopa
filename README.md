@@ -1,32 +1,29 @@
 # minimal-react-boilerplate
 Minimal react boilerplate - babel/webpack2
 ## Installation
-TODO: Describe the installation process
-## Usage
-
 Execute `npm install` to install dependencies
-
-Then
-
+## Usage
 Execute `npm run dev` to run the development server on **http://localhost:8080
 or
 Execute `npm run prod` to run the production server. To test it works see on **http://localhost:4000
 
 ## About
 As  part of Zopa's technical test I have been asked to finish implementing a test project they have send me. The project describes the process of connecting a bank account from several major banks and to their Zopa Account. 3 screens out of the required 4 are already built. The code isn't perfect and there is key functionality that is missing, like bank selection and form validation. Additionally the unit tests are broken. 
-## What's been asked
+## What's done
 1. CSS Approach 
-I have changed boilerplate to add post-css and css-modules. Also, added redux-devtools to be a ble to work with redux data in a development setting. See wiki pages [CSS-Methodology](https://github.com/jmarcosuarez/nopa/wiki/CSS-Methodology)
+I have changed boilerplate to add __post-css__ and __css-modules__. Also, added __redux-devtools__ to be able to work with redux data in a development setting. See wiki pages [CSS-Methodology](https://github.com/jmarcosuarez/nopa/wiki/CSS-Methodology)
+
 Unfortunately I haven't as of now finish implementing CSS throughout the app. But the environment is finish and is quite maintainable in the long run. Whenever possible and where I have written any CSS I have meant to write cleaner modern syntax and while talking about layout I always use the Flexbox layout model.
 2. Implement a bank selection that persists the login screen
 Bank selection is done by saving the the user selected bank to the redux store. We are using the ChooseBankPage container that maps through an inline bankList array calling BankListItem component to render.  BankListItem resides on the components folder and it just renders the bank images as buttons and each with an onClick handler triggering the action to save the bank name to the redux store. Special carefulness have been made into no binding but instead using arrow functions when declaring handlers within react classes as this. See [BankListItem](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/components/BankListItem/BankListItem.js) while the ChooseBankPage container is [here.](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/containers/ChooseBank/ChooseBankPage.js)
 
 3. Implement sensible form validation
 I have implemented a HOC that wraps the form component and that deals with form state and actions present in the form. Additionally I have detached actual validations from the form state so they user only needs to define the validation rules and pass them to the validations HOC as a config object. So these are not hard-coded into the HOC. See more on the wiki pages [Form-Validation](https://github.com/jmarcosuarez/nopa/wiki/Form-Validation)
+
 The container component is LoginPage.js and the HOC is called Relalidation.js, both are found [here](https://github.com/jmarcosuarez/nopa/tree/master/src/app/client/containers/Login)
 The login form sits on a components folder [here](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/components/LoginForm/LoginForm.js)
 
-4. Build the transactions screen using the api end-point http://localhost:3000/api/transactions
+4. Build the transactions screen using the api end-point _localhost:3000/api/transactions_
 First, a server have been implemented to serve json from the data folder, enabling CORS to enable calls to http://localhost. I this sense I use the concurrently library to run both the development server and the API at the same time, with just one script. See scripts on the package.json file [here](https://github.com/jmarcosuarez/nopa/blob/master/package.json)
 The dev API server [here](https://github.com/jmarcosuarez/nopa/blob/master/src/app/server/api.js)
 
