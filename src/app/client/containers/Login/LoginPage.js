@@ -38,11 +38,11 @@ export default class LoginPage extends Component {
     super(props);
     this.state = {
       form: {
-        surname: 'Denis', 
+        surname: '', 
         sortCode: '23-43-54',
         accountNumber: '09434534343434',
         passCode: '0943',
-        memorableWord: 'Qwteyruy',
+        memorableWord: '',
       } };
   }
 

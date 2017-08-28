@@ -11,16 +11,6 @@ import styles from './Statement.css';
 import { Layout, Button, AccDetails, ListView, ListRow } from '../../components';
 
 class StatementPage extends Component {
-  // componentDidMount() {
-  //   // this will be here only for testing purposes
-  //   this.props.onLogInUser({
-  //     surname: 'Denis', 
-  //     sortCode: '23-43-54',
-  //     accountNumber: '09434534343434',
-  //     passCode: '0943',
-  //     memorableWord: 'Qwteyruy',
-  //   });
-  // }
   renderLoading() {
     return (
       <p>Loading...</p>

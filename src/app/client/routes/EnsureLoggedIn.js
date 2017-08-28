@@ -10,17 +10,16 @@ class EnsureLoggedIn extends Component {
     if (!loggedIn) {
       // If we are not logged In when visiting protected page, redirect to "/login"
       // currentURL is for future redirection, just trigger event to keep it save.
-      // browserHistory.replace("/login");
+      browserHistory.replace("/login");
     }
   }
 
   render() {
-    // const { loggedIn } = this.props;
-    // if (loggedIn) {
-    //   return this.props.children;
-    // }
-    // return null;
-    return this.props.children;
+    const { loggedIn } = this.props;
+    if (loggedIn) {
+      return this.props.children;
+    }
+    return null;
   }
 }
 
