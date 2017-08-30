@@ -1,5 +1,7 @@
 # nopa
-React/Redux/Thunk - babel/webpack2
+### React/Redux/Thunk - babel/webpack2
+
+As  part of Zopa's technical test I have been asked to finish implementing a test project they have send me. The project describes the process of connecting a bank account from several major banks and to their Zopa Account. 3 screens out of the required 4 are already built. The code isn't perfect and there is key functionality that is missing, like bank selection and form validation. Additionally the unit tests are broken. 
 ## Installation
 Execute `npm install` to install dependencies
 ## Usage
@@ -9,19 +11,16 @@ or
 
 Execute `npm run prod` to run the production server. For testing use _localhost:4000_
 
-## About
-As  part of Zopa's technical test I have been asked to finish implementing a test project they have send me. The project describes the process of connecting a bank account from several major banks and to their Zopa Account. 3 screens out of the required 4 are already built. The code isn't perfect and there is key functionality that is missing, like bank selection and form validation. Additionally the unit tests are broken. 
 ## What's done
 1. __CSS Approach:__ I have changed boilerplate to add __post-css__ and __css-modules__. Also, added __redux-devtools__ to be able to work with redux data in a development setting. See wiki pages [CSS-Methodology](https://github.com/jmarcosuarez/nopa/wiki/CSS-Methodology)
 
 Unfortunately I haven't as of now finish implementing CSS throughout the app. But the environment is finish and is quite maintainable in the long run. Whenever possible and where I have written any CSS I have meant to write cleaner modern syntax and while talking about layout I always use the Flexbox layout model.
 
-2. __Implement a bank selection that persists the login screen.__Bank selection is done by saving the user selected bank to the redux store. We are using the ChooseBankPage container that maps through an inline array calling BankListItem component to render on each. BankListItem resides on the components folder and it just renders the bank images as buttons. Each button will have an onClick handler triggering the action to save the bank name to the redux store when triggered. Special carefulness have been made into no binding but instead using arrow functions when declaring handlers within react classes as this one. See [BankListItem](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/components/BankListItem/BankListItem.js) while the ChooseBankPage container is [here.](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/containers/ChooseBank/ChooseBankPage.js)
+2. __Implement a bank selection that persists the login screen:__ Bank selection is done by saving the user selected bank to the redux store. We are using the ChooseBankPage container that maps through an inline array calling BankListItem component to render on each. BankListItem resides on the components folder and it just renders the bank images as buttons. Each button will have an onClick handler triggering the action to save the bank name to the redux store when triggered. Special carefulness have been made into no binding but instead using arrow functions when declaring handlers within react classes as this one. See [BankListItem](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/components/BankListItem/BankListItem.js) while the ChooseBankPage container is [here.](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/containers/ChooseBank/ChooseBankPage.js)
 
 3. __Implement sensible form validation:__ I have implemented a HOC that wraps the form component and that deals with form state and actions present in the form. Additionally I have detached actual validations from the form state so they user only needs to define the validation rules and pass them to the validations HOC as a config object. So these are not hard-coded into the HOC. See more on the wiki pages [Form-Validation](https://github.com/jmarcosuarez/nopa/wiki/Form-Validation)
 
-The container component is LoginPage.js and the HOC is called Relalidation.js, both are found [here](https://github.com/jmarcosuarez/nopa/tree/master/src/app/client/containers/Login)
-The login form sits on a components folder [here](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/components/LoginForm/LoginForm.js)
+The container component is _LoginPage.js_ and the HOC is called _Revalidation.js_, both are found [here](https://github.com/jmarcosuarez/nopa/tree/master/src/app/client/containers/Login) and the login form is [here](https://github.com/jmarcosuarez/nopa/blob/master/src/app/client/components/LoginForm/LoginForm.js).
 
 4. __Build the transactions screen using the api end-point__ _localhost:3000/api/transactions_: First, a server have been implemented to serve json from the data folder, enabling CORS to handle calls to _localhost_. I this sense I use the _concurrently_ library to run both the development server and the API at the same time, with just one script. See scripts on the _package.json_ file [here](https://github.com/jmarcosuarez/nopa/blob/master/package.json) and the _dev API server_ [here](https://github.com/jmarcosuarez/nopa/blob/master/src/app/server/api.js)
 
