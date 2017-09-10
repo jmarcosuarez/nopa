@@ -1,6 +1,6 @@
 const auth = {
   login(callback) {
-    // If there is a token in the localStorage, the user is already authenticated
+    // Not implemented yet. Fixed success=true return;
     callback(true);
   },
 };
