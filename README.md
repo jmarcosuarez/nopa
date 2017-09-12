@@ -1,7 +1,7 @@
 # nopa
 ### React/Redux/Thunk - babel/webpack2
 
-This project describes the process of connecting a bank account to your own Account. So when you logg in you are taked to the choose a bank account, then as one bank in choosen you are ask to finish  adding loggin data. As the form is send you retreive your bank data to be viewed from withing the app.
+This project describes the process of connecting a bank account to your own Account. So when you logg in you are taked to the choose a bank account, then as one bank is choosen you are asked to finish adding loggin data to complete loggin in. As the form is send you area ttaking to a list displaying your own bank data from your bank and through this app.
 
 ## Installation
 Execute `npm install` to install dependencies
