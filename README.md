@@ -1,4 +1,5 @@
 # nopa
+## Warning! This project is very old at this point! Some of the ideas may be fine would not recommend you use it as a modern reference
 ### React/Redux/Thunk - babel/webpack2
 
 This project describes the process of connecting a bank account to your own Account. So when you log in you are taken to the choose a bank account, then as one bank is chosen you are asked to finish adding login data to complete login in. As the form is send you are send to a page where your latest bank transactions data is displayed.
